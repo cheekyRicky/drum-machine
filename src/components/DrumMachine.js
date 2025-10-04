@@ -24,6 +24,7 @@ const DrumMachine = () => {
             document.removeEventListener('keydown', handleKeyDown);
         };
     }, [handleKeyDown]);
+/* Try without useeffect to fix mobile bug.
 
     useEffect(() => {
         audioClips.forEach((clip) => {
@@ -33,13 +34,19 @@ const DrumMachine = () => {
             }
         })
     })
-
+*/
     const playSound = (key, clipId) => {
         const audioEl = document.getElementById(key);
         if (!audioEl) return;
 
+        if (muted) {
+            audioEl.pause();
+            audioEl.currentTime = 0;
+            return;
+        }
+
         audioEl.currentTime = 0;
-        audioEl.volume = muted ? 0 : volume;
+        audioEl.volume = volume;
         audioEl.play();
 
         setDisplay(clipId);
