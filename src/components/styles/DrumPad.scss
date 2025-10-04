@@ -1,0 +1,35 @@
+@import "variables";
+
+.drum-pad {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 1 / 1;
+    border: 1px solid $dm-dark;
+    border-radius: 15px;
+    cursor: pointer;
+    background: $dm-grad-light;
+    box-shadow: $btn-shadow;
+    font-size: 1.5rem;
+    font-weight: bold;
+    transition: all 0.1s ease-in-out;
+    color: $dm-neutral;
+
+    &:hover {
+        box-shadow: none;
+        font-size: 1.60rem;
+        border: 1px solid $dm-dark;
+        color: $dm-black;
+    }
+
+    &:active {
+        box-shadow: $btn-active-shadow;
+        font-size: 1.25rem;
+        color: $dm-white;
+    }
+}
+
+.drum-pad.active {
+    box-shadow: $btn-active-shadow;
+    font-size: 1.25rem;
+    color: $dm-white;
+}

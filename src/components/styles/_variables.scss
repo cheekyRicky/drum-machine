@@ -1,0 +1,52 @@
+$primary-color: #C9D4B8;
+$secondary-color: #7F8C68;
+$accent-color: #2f4c71;
+$background-color: #685C6B;
+$border-color: #414736;
+
+
+// The color pallete:
+
+$dm-white: #FDFBF4;
+$dm-grey: #ABABAB;
+$dm-neutral: #5F5B59;
+$dm-dark: #2D312E;
+$dm-black: #070707;
+
+$dm-grad-neu-dar: linear-gradient(145deg, $dm-neutral, $dm-dark);
+$dm-grad-neu-bla: linear-gradient(145deg, $dm-neutral, $dm-black);
+$dm-grad-gre-dar: linear-gradient(145deg, $dm-grey, $dm-dark);
+$dm-grad-gre-neu: linear-gradient(145deg, $dm-grey, $dm-neutral);
+$dm-grad-light: linear-gradient(145deg, $dm-white, $dm-grey);
+$dm-grad-bla-dar: linear-gradient(145deg, $dm-black, $dm-dark);
+
+$btn-shadow: 1px 1px 10px $dm-grey,
+              -1px -1px 10px $dm-neutral;
+$btn-active-shadow: inset 5px 5px 10px $dm-neutral,
+                     inset -5px -5px 10px $dm-grey;
+
+
+$light-gradient: linear-gradient(145deg, $primary-color, $secondary-color);
+$dark-gradient: linear-gradient(90deg, $background-color, $primary-color);
+$purple-gradient: linear-gradient(145deg, #D4AAE0, #9564A3);
+$button-gradient: linear-gradient(145deg, $border-color, $background-color);
+$button-shadow: 5px 5px 10px #8c7bb3,
+                 -5px -5px 10px #c6f0d1;
+$button-active-shadow: inset 5px 5px 10px $border-color,
+                        inset -5px -5px 10px $secondary-color;
+
+$button-shadow-alt: inset 3px 3px 10px #2f4c71,
+                 inset -2px -2px 10px #c6f0d1;
+
+$box-shadow-color1: #8c7bb3;
+$box-shadow-color2: #c6f0d1;
+
+$thumb-color: #2f4c71;
+
+$font-family: 'Palatino', sans-serif;
+$font-size-base: 1rem;
+$font-size-lg: 1.5rem;
+$font-weight-bold: bold;
+$border-radius: 5px;
+$transition-duration: 0.1s;
+$transition-ease: ease-in-out;

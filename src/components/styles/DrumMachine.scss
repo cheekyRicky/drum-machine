@@ -1,0 +1,171 @@
+@import "variables";
+
+.pad-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    justify-content: center;
+    align-content: center;
+    width: max-content;
+    height: max-content;
+    padding: 0.75rem;
+    border: 1px solid $dm-dark;
+    border-radius: 5%;
+    gap: 1rem;
+    background: $dm-grad-neu-dar;
+}
+
+#drum-machine {
+    position: relative;
+    max-width: 95vw;
+    margin: 1rem;
+    width: auto;
+    background: $dm-grad-gre-neu;
+    box-shadow: $dm-grad-gre-dar;
+    border-radius: 15px;
+    border: 3px solid $background-color;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+
+    &::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: -2px;
+    width: 215px;
+    height: 10px;
+    background: $dm-grad-bla-dar;
+    border-radius: 5px 5px 0 0;
+    opacity: 0.9;
+}
+
+    &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 30px;
+    width: 90%;
+    height: 10px;
+    background: $dm-grad-gre-dar;
+    border-radius: 0 0 100px 10px;
+    opacity: 0.2;
+}
+}
+
+.controls {
+    flex: 1;
+    padding: 1rem;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 1rem;
+    background: $dm-grad-light;
+    color: $dm-white;
+    border: 2px solid $dm-dark;
+    box-shadow: $btn-shadow;
+}
+
+.controls-header {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: $dm-dark;
+    text-shadow: 1px 1px 2px $dm-black;
+    margin-bottom: 0.5rem;
+    user-select: none;
+}
+
+#volume {
+    width: 100%;
+    margin: 0;
+    cursor: pointer;
+    accent-color: $dm-dark;
+    background-color: $dm-white;
+    border-radius: 25px;
+    box-shadow: none;
+    transition: all 0.1s ease-in-out;
+            
+    &:hover {
+        box-shadow: none;
+        background-color: $dm-white;
+}
+    &:active {
+        box-shadow: none;
+        accent-color: $dm-black;
+        background-color: $dm-white;
+        padding: 0;
+        margin: 0;
+    }
+    &:focus {
+        outline: none;
+        box-shadow: none;
+    }
+};
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 10px;
+    height: 10px;
+    padding: 0;
+    margin: 0;
+    background: $dm-dark;
+    border-radius: 100%;
+    border: 1px solid $dm-black;
+    cursor: pointer;
+    transition: all 0.1s ease-in-out;
+    &:active {
+        background: transparent;
+        box-shadow: $box-shadow-color1;
+    }
+}
+
+@media (min-width: 768px) {
+  #drum-machine {
+    flex-direction: row;
+  }
+}
+
+.bi {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.btn-volume {
+    height: fit-content;
+    border: 1px solid transparent;
+    border-radius: 40%;
+    background-color: $dm-grey;
+    color: $dm-dark;
+
+    svg {
+            transition: transform 0.2s ease, border-color 0.2s ease;
+        }
+
+    &:hover {
+        background: none;
+        border: 1px solid $dm-neutral;
+    
+        svg {
+            transform: scale(1.1);
+        }
+    }
+}
+
+.muted {
+    background-color: $dm-dark;
+    color: $dm-grey;
+}
+
+.unmuted {
+    background-color: $dm-grey;
+    color: $dm-black;
+}
+
+.h3-heading {
+    border-bottom: 2px solid $dm-dark;
+    color: $dm-black;
+}

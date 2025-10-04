@@ -1,0 +1,10 @@
+@import "variables";
+
+#display {
+    height: 100%;
+    font-size: $font-size-lg;
+    font-weight: bold;
+    background: $dm-grad-light;
+    color: $dm-dark;
+    box-shadow: $btn-active-shadow;
+}
